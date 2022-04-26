@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { ContentContainerComponent } from './content-container/content-container.component';
+import { AddNewOfferComponent } from './add-new-offer/add-new-offer.component';
+import { DisplayAllOffersComponent } from './display-all-offers/display-all-offers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    ContentContainerComponent
+    ContentContainerComponent,
+    AddNewOfferComponent,
+    DisplayAllOffersComponent
   ],
   imports: [
     BrowserModule,
