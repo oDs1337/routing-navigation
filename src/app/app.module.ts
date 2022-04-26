@@ -7,6 +7,7 @@ import { NavComponent } from './nav/nav.component';
 import { ContentContainerComponent } from './content-container/content-container.component';
 import { AddNewOfferComponent } from './add-new-offer/add-new-offer.component';
 import { DisplayAllOffersComponent } from './display-all-offers/display-all-offers.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,12 @@ import { DisplayAllOffersComponent } from './display-all-offers/display-all-offe
     NavComponent,
     ContentContainerComponent,
     AddNewOfferComponent,
-    DisplayAllOffersComponent
+    DisplayAllOffersComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

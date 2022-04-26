@@ -1,3 +1,5 @@
+import { OFFERS } from './../mock-offers';
+import { Offer } from './../offer';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayAllOffersComponent implements OnInit {
 
+  offerList: Offer[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.getOffers();
+  }
+
+  getOffers(): void{
+    this.offerList = OFFERS;
   }
 
 }
