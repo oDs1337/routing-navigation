@@ -4,9 +4,16 @@
   display: flex;
   justify-content: center;
 }
-.contentContainer{
+.welcomeContainer{
   width: 100%;
-  height: 150px;
+  height: 100px;
   display: flex;
   justify-content: center;
+}
+.contentContainer{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  border: solid 1px red;
 }

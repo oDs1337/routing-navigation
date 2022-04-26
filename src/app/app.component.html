@@ -1,7 +1,11 @@
 <div class="navBar">
-  <app-nav></app-nav>
+  <app-nav (nameChanged)="name=$event"></app-nav>
+</div>
+<div class="welcomeContainer">
+  {{name}}{{title}}
 </div>
 
 <div class="contentContainer">
-  <app-content-container></app-content-container>
+
+  <app-content-container [nameFromNavBar]="name"></app-content-container>
 </div>

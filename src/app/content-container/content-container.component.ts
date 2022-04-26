@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-content-container',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-container.component.css']
 })
 export class ContentContainerComponent implements OnInit {
+  @Input() nameFromNavBar = '';
+
+  test: string = "dupa";
 
   constructor() { }
 

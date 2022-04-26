@@ -8,8 +8,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class NavComponent implements OnInit {
   @Output() nameChanged = new EventEmitter<string>()
 
-  title: string = "Howdy, enter your name here:"
-  name: string = "";
+  name: string = "Dupa";
+
 
   constructor() { }
 
