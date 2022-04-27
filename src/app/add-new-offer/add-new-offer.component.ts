@@ -12,32 +12,8 @@ export class AddNewOfferComponent implements OnInit {
 
   newOfferForm: any;
 
-  constructor(private formBuilder: FormBuilder) {
-    this.newOfferForm.FormBuilder.group({
-      name: [''],
-      description: [''],
-      price: [''],
-    });
-   }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  getName(){
-    return this.newOfferForm.get('name');
-  }
-
-  getDescription(){
-    return this.newOfferForm.get('description');
-  }
-
-  getPrice(){
-    return this.newOfferForm.get('price');
-  }
-
-  offerList: Offer[] = [];
-
-  saveOffer(){
-    console.log(this.newOfferForm.value);
   }
 }
