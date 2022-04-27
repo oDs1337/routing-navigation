@@ -18,7 +18,8 @@ export class DisplayAllOffersComponent implements OnInit {
   }
 
   getOffers(): void{
-    this.offerList = this.offerService.getOffers();
+    this.offerService.getOffers()
+          .subscribe(offers => this.offerList = offers);
   }
 
 }

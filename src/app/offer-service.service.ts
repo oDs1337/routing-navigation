@@ -1,6 +1,7 @@
 import { Offer } from './offer';
 import { OFFERS } from './mock-offers';
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +10,9 @@ export class OfferServiceService {
 
   constructor() { }
 
-  getOffers(): Offer[]{
-    return OFFERS;
+  getOffers(): Observable<Offer[]>{
+    const offers = of(OFFERS);
+    return offers;
   }
   pushOffer(name: string, description: string, price: string){
     OFFERS.push({name,description,price});
