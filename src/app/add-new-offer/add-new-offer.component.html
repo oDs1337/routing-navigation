@@ -1,1 +1,6 @@
-<p>dupa</p>>
+<form>
+  <input type="text" id="name" #nameInput (keyup)="inputName(nameInput.value)" placeholder="Your name">
+  <input type="text" id="description" #descriptionInput (keyup)="inputDescription(descriptionInput.value)" placeholder="Your description">
+  <input type="text" id="price" #priceInput (keyup)="inputPrice(priceInput.value)" placeholder="Your price">
+    <input type="button" id="addOffer" (click)="addOfferPressed()" value="Add offer">
+</form>

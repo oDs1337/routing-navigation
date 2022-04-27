@@ -1,6 +1,5 @@
 import { Offer } from './../offer';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators , FormGroup} from '@angular/forms';
 
 
 @Component({
@@ -10,10 +9,27 @@ import { FormBuilder, Validators , FormGroup} from '@angular/forms';
 })
 export class AddNewOfferComponent implements OnInit {
 
+  name: string = "";
+  description: string = "";
+  price: string = "";
+
   newOfferForm: any;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+  }
+
+  inputName(value: string){
+    this.name = value;
+  }
+  inputDescription(value: string){
+    this.description = value;
+  }
+  inputPrice(value: string){
+    this.price = value;
+  }
+  addOfferPressed(){
+    console.log(`${this.name} ${this.description} ${this.price}`);
   }
 }
