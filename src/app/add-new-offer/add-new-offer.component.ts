@@ -1,4 +1,5 @@
 import { Offer } from './../offer';
+import { OfferServiceService } from '../offer-service.service';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -15,7 +16,7 @@ export class AddNewOfferComponent implements OnInit {
 
   newOfferForm: any;
 
-  constructor() {}
+  constructor(private offerService: OfferServiceService) {}
 
   ngOnInit(): void {
   }
@@ -31,5 +32,6 @@ export class AddNewOfferComponent implements OnInit {
   }
   addOfferPressed(){
     console.log(`${this.name} ${this.description} ${this.price}`);
+    this.offerService.pushOffer(this.name,this.description,this.price);
   }
 }

@@ -12,4 +12,7 @@ export class OfferServiceService {
   getOffers(): Offer[]{
     return OFFERS;
   }
+  pushOffer(name: string, description: string, price: string){
+    OFFERS.push({name,description,price});
+  }
 }
