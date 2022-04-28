@@ -11,8 +11,8 @@ export class OfferServiceService {
   constructor() { }
 
   getOffers(): Observable<Offer[]>{
-    const offers = of(OFFERS);
-    return offers;
+    //const offers = of(OFFERS);
+    return of(OFFERS);
   }
   pushOffer(name: string, description: string, price: string){
     OFFERS.push({name,description,price});
